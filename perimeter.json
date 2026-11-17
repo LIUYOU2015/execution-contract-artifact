@@ -1,0 +1,42 @@
+{
+  "source_sha": "e654726234172564860a76b82d2b26909bbf4aa8",
+  "task_image": "python@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159",
+  "execd_image": "opensandbox/execd@sha256:6cf7dba2f21f0b536e100563d841ac58a9f31c2b0a081b7ac76796a24d6f47e2",
+  "platform": "linux/amd64",
+  "label_keys": {
+    "study": "research.codex.c01_study",
+    "trial": "research.codex.c01_trial",
+    "role": "research.codex.c01_role"
+  },
+  "role_limits": {
+    "target": {
+      "cpus": 1,
+      "memory_mib": 256,
+      "pids": 64
+    },
+    "sentinel": {
+      "cpus": 0.1,
+      "memory_mib": 128,
+      "pids": 64
+    },
+    "helper": {
+      "cpus": 0.25,
+      "memory_mib": 128,
+      "pids": 64
+    }
+  },
+  "scope_rules": [
+    "Install Docker factory/discovery/write guards before native service startup restoration",
+    "Check exact study/trial/role and registered immutable container identity",
+    "Refuse cross-trial mutation and trial-time sentinel removal",
+    "Use cached exact images; refuse pulls/volume/global-prune operations",
+    "No lost-ID recovery or cleanup repair added to SDK"
+  ],
+  "management_timeout_s": 120,
+  "lifetime_settings_s": [
+    60,
+    null
+  ],
+  "sampling": "nominal250ms wait plus actual inspection; use recorded brackets",
+  "scientific_horizon": "at least30s after SDK return; finite lost-ID through expiry+15s or confirmedabsence"
+}

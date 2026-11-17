@@ -1,0 +1,384 @@
+{
+  "source_run": "20261115-c01-main-02",
+  "source_analysis_sha256": "4a28241c14888e0f778fb3c1ce4d5bf3c93270e52c0b20b6077cfb2df7b94f54",
+  "rows": [
+    {
+      "trial": 1,
+      "trial_id": "t01-known_id_cancel-manual",
+      "schedule": "known_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.049144761,
+        0.005361697
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.315357595,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 2,
+      "trial_id": "t02-known_id_cancel-manual",
+      "schedule": "known_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.044092827,
+        0.005271729
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.295094412,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 3,
+      "trial_id": "t03-known_id_cancel-ttl60",
+      "schedule": "known_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.056589692,
+        0.007045353
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.336158599,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 4,
+      "trial_id": "t04-known_id_cancel-ttl60",
+      "schedule": "known_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.053832814,
+        0.006054116
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.304225497,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 5,
+      "trial_id": "t05-normal-manual",
+      "schedule": "normal",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.270018186,
+        0.008715271
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.269583196,
+      "terminal_anchor": "destroy return"
+    },
+    {
+      "trial": 6,
+      "trial_id": "t06-normal-ttl60",
+      "schedule": "normal",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.271548526,
+        0.001687206
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.271046689,
+      "terminal_anchor": "destroy return"
+    },
+    {
+      "trial": 7,
+      "trial_id": "t07-lost_id_cancel-ttl60",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        58.423661379,
+        58.678025079
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 1,
+      "expiry_remove_count": 1,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.035288966,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 8,
+      "trial_id": "t08-known_id_cancel-ttl60",
+      "schedule": "known_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.049032849,
+        0.004890712
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.312060729,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 9,
+      "trial_id": "t09-lost_id_cancel-manual",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        30.14362787,
+        null
+      ],
+      "right_censored": true,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": true,
+      "terminal_latency_s": 0.033773445,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 10,
+      "trial_id": "t10-lost_id_cancel-ttl60",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        58.629752309,
+        58.888246882
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 1,
+      "expiry_remove_count": 1,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.033090605,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 11,
+      "trial_id": "t11-lost_id_cancel-manual",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        30.28057262,
+        null
+      ],
+      "right_censored": true,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": true,
+      "terminal_latency_s": 0.033182077,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 12,
+      "trial_id": "t12-known_id_cancel-manual",
+      "schedule": "known_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.059095631,
+        0.006803788
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.34227542,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 13,
+      "trial_id": "t13-lost_id_cancel-ttl60",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        58.498302441,
+        58.75353151
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 1,
+      "expiry_remove_count": 1,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.036632489,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 14,
+      "trial_id": "t14-normal-ttl60",
+      "schedule": "normal",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.02928765,
+        0.005379303
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.291424988,
+      "terminal_anchor": "destroy return"
+    },
+    {
+      "trial": 15,
+      "trial_id": "t15-lost_id_cancel-manual",
+      "schedule": "lost_id_cancel",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": false,
+      "sdk_delete_requests": 0,
+      "present_first_post_terminal": true,
+      "present_beyond_30s": true,
+      "natural_removal_bracket_s_after_terminal": [
+        30.158826668,
+        null
+      ],
+      "right_censored": true,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": true,
+      "terminal_latency_s": 0.058970285,
+      "terminal_anchor": "cancellation return"
+    },
+    {
+      "trial": 16,
+      "trial_id": "t16-normal-manual",
+      "schedule": "normal",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.040583507,
+        0.005016677
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.293378993,
+      "terminal_anchor": "destroy return"
+    },
+    {
+      "trial": 17,
+      "trial_id": "t17-normal-ttl60",
+      "schedule": "normal",
+      "lifetime_s": 60,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.27200139,
+        -0.005143486
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.271603717,
+      "terminal_anchor": "destroy return"
+    },
+    {
+      "trial": 18,
+      "trial_id": "t18-normal-manual",
+      "schedule": "normal",
+      "lifetime_s": null,
+      "valid": true,
+      "sdk_id_observed": true,
+      "sdk_delete_requests": 1,
+      "present_first_post_terminal": false,
+      "present_beyond_30s": false,
+      "natural_removal_bracket_s_after_terminal": [
+        -0.280846295,
+        -0.010653019
+      ],
+      "right_censored": false,
+      "expiry_callback_entries": 0,
+      "expiry_remove_count": 0,
+      "post_horizon_admin": false,
+      "terminal_latency_s": 0.280424162,
+      "terminal_anchor": "destroy return"
+    }
+  ]
+}
