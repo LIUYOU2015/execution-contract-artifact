@@ -1,8 +1,10 @@
 # Execution-contract reproducibility artifact
 
-Browse [all54candidate records](COHORT_54.md) (**23detailed /28context /3excluded**), [all18main trials](trials-18.md), the [proxy/driver](experiment.py), [scoped Docker perimeter](server.py), [source pins](common.py), and [perimeter configuration](perimeter.json).
+The completed **32/32 model-assisted primary-source audit** is in [RECHECK_32.md](RECHECK_32.md) and [RECHECK_32.json](RECHECK_32.json), updated November 18, 2026. Each assertion has a source version, location, observation and hash; evidence classes and remaining scope limits stay explicit.
 
-Download **[reproduction-package.zip](reproduction-package.zip)** for the canonical directory layout, full raw request/event/observation data, frozen protocol/amendment, both pilots and the stopped main run,251claim ledger, source adjudications and offline verification. The Python files at repository root are exact browsing copies; execute the canonical paths after extracting the ZIP.
+Browse [all 54 candidates](COHORT_54.md) (23 detailed / 28 context / 3 excluded), [all 18 trials](trials-18.md), the [proxy/driver](experiment.py), [scoped Docker perimeter](server.py), [source pins](common.py), and [configuration](perimeter.json). [Human review status](HUMAN_REVIEW_STATUS.json) remains separate from the model audit.
+
+Download [reproduction-package.zip](reproduction-package.zip) for the canonical layout, complete raw events/request bodies/observations, separate pilots/stopped-run history, protocol/amendment, original 251-claim ledger, current audit and offline verifier. Root Python files are browsing copies; execute canonical paths after extraction.
 
 ```sh
 unzip reproduction-package.zip -d reproduction-package
@@ -12,4 +14,4 @@ python3 native/code/c01-lost-reply/analyze.py native/runs/20261115-c01-main-02 -
 python3 literature/illustrative-ledger/recompute.py
 ```
 
-Offline verification requires Python3.12and no Docker/model API. Native-rerun instructions are in REPRODUCE.md inside the ZIP. The main02campaign has18valid trials; early5valid/1invalid/12unstarted records remain separate, described in [experiment history](EXPERIMENT_HISTORY.md). Signed timing brackets and censored manual retention are preserved. The32source checks are model-assisted; the constructed resource ledger is distinct from measurements. See PACKAGE_MANIFEST.json for all content hashes and source-provenance mappings.
+Python 3.12 is sufficient for offline verification. Native rerun details are in REPRODUCE.md inside the ZIP. Main02 has 18 valid trials; [earlier history](EXPERIMENT_HISTORY.md) is retained separately. Signed observation brackets and censored manual retention are preserved. The resource-policy ledger is constructed. No human agreement or independent native replication is implied by the model audit.

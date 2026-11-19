@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "updated_date": "2026-11-18",
+  "review_mode": "guided human verification against primary text/figures with model-prepared pointers; no independent native replication or inter-rater agreement",
+  "reviewer_pseudonym": "H1",
+  "selected_assertions": 32,
+  "human_completed": 1,
+  "human_pending": 31,
+  "checks": [
+    {
+      "claim_id": "RT-02",
+      "status": "supported_as_written",
+      "initial_disposition": "scope qualification requested",
+      "final_disposition": "requested qualification applied",
+      "source_version": "2607.01415v1",
+      "source_locations": [
+        "PDFp3 Figure2 and \u00a74.2",
+        "PDFp5 \u00a76"
+      ],
+      "verified_dimensions": [
+        "four T0 legend/value/unit correspondences",
+        "P50/median and source-reported100trials per configuration",
+        "first-command-capable endpoint",
+        "ratio of displayed medians and about110x rounding",
+        "configuration-specific scope"
+      ],
+      "current_manuscript_quote": "In the authors' T0 test configuration (minimal commands), median startup was 17.9 s for the cloud VM and 0.162 s for the hosted sandbox (about 110\u00d7).",
+      "manuscript_locator": "Table5/M1 first sentence",
+      "date": "2026-11-17"
+    }
+  ],
+  "history_note": "Earlier model audit and pinned public reproduction snapshot retain their original dated status. Current follow-up records accompany the revised local source package; online snapshot is not changed one claim at a time.",
+  "partial_checks": [
+    {
+      "claim_id": "RT-03",
+      "completed_subchecks": [
+        "A:values/units",
+        "B:task definitions",
+        "C:ratio/rounding"
+      ],
+      "human_overall_status": "pending",
+      "source_reading_basis": "original figure and supplied primary-text excerpts; independent full-paper reading not inferred",
+      "unconfirmed_subcheck": "D:overall interpretation scope"
+    }
+  ]
+}

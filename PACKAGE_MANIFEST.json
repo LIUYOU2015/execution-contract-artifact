@@ -1,15 +1,17 @@
 {
-  "version": 1,
-  "artifact": "execution-contract-reproducibility",
+  "version": 2,
+  "updated_date": "2026-11-18",
   "candidate_counts": {
     "detailed": 23,
     "context": 28,
     "excluded": 3
   },
   "reported_native_trials": 18,
+  "model_source_checks_completed": 32,
+  "human_source_checks_completed": 1,
   "source_native_zip_sha256": "557b8a34639be9a770d3a333d56033b31c869c1ce787d2367d40a53c7904f22f",
   "files": {
-    "README.md": "fcf2c4fb5f2f880b60392a2610a6eb34550f54e38610366c9ccafdf1fe2f5357",
+    "README.md": "946a4c98a04da50eb249f2c41621bb9f793cf8e81dc7bcacf9b071a020587376",
     "REPRODUCE.md": "4de0f5502922ae950be389df94ad83ef805297373af145069f0f23691b955ebd",
     "audit/PRIMARY_RECHECK_32.json": "76ab1d2a6db40eb2f545b5c784b269b8d792a40015ec74df2c019808d0e1dc46",
     "audit/PRIMARY_RECHECK_32.md": "bd9d32aab1d1910f0c808e6255a6672e4e2f0363457b202d81ca1ec683fc1d0a",
@@ -19,6 +21,8 @@
     "config/requirements-freeze.txt": "47d8fe4788f1c236aa0d563f32fdf1d35a638e31462a39dbf5265e15127b9b0a",
     "data/trials-18.json": "a352655f43466b5efc48aeca4efc11e2cc621a10a65d9b8636bff0f447a48725",
     "data/trials-18.md": "dc5cc12fa8006c669d0fef192ca8b3d14ab4cb34a780f9eaf9af457bbe8500f7",
+    "literature/AUTHOR_VERIFICATION_32.csv": "218869ad21b0080c4b2ac93cb89ca05507b65dbefe224b7cf30836f01bdaf339",
+    "literature/AUTHOR_VERIFICATION_32.md": "0c9eb4f8612fe6700229bf1d9a5f19688a38e88f25a08a90bfae243f6de22e8e",
     "literature/COHORT_54.json": "95a60525ff86bd20bdfe7b761365bd4c0fecb68b6d84d61094f4dbcce6fa429e",
     "literature/COHORT_54.md": "12475b8dcf168846c30ac22a6db42f4df157858bbc7aa4d522f53882ae165e90",
     "literature/EVALUATION_CHECKLIST.md": "321f1b3eb4a3a5981095788d3a8d7b3387f0a0bb403545d714677d1c96dc8e04",
@@ -28,6 +32,7 @@
     "literature/cohort.json": "e6a4e023b68f633f552e08fcd2299ee36dd0b612b4e94ab822479f723b147503",
     "literature/complete_record.json": "e14c46fbf349d897330b53d8ff6e4fc2f34c4bdb1c127b0f8434d5b00d678b70",
     "literature/discovery_records.jsonl": "8690cdeee966dd075205976b8e3fe9e40e0acd1de8a557ad2d6c522d0039d46f",
+    "literature/human_source_checks/CURRENT.json": "996ac8bf7f52ad70a9e51b6a1085d35d95f285596855216f908eed9d5eb446ed",
     "literature/illustrative-ledger/README.md": "44c08af39344f5acec15d9fefc4992e2dbe65fd36e05e75d71a358e4fa988062",
     "literature/illustrative-ledger/SUMMARY.json": "8e058acf79e3261b13898043d5c076ca92aff70cc9dd84964e88564d25847fc4",
     "literature/illustrative-ledger/allocations.csv": "09094a0e7ab87e61878ea058ff29534e9ae584d1ec549944eef9bf5936242a7b",
@@ -38,6 +43,9 @@
     "literature/measurement_cases.json": "993039ca82c9df9245641316a97cf983d79825189b9724aad44778a457fe28a4",
     "literature/primary_recheck_20261116/PRIMARY_RECHECK_32.json": "76ab1d2a6db40eb2f545b5c784b269b8d792a40015ec74df2c019808d0e1dc46",
     "literature/primary_recheck_20261116/PRIMARY_RECHECK_32.md": "bd9d32aab1d1910f0c808e6255a6672e4e2f0363457b202d81ca1ec683fc1d0a",
+    "literature/primary_recheck_20261118/RECHECK_32.json": "af0b2c3ec77cf40eec3a82c9b35765535679bf900e0bb77cd737469f308a1647",
+    "literature/primary_recheck_20261118/RECHECK_32.md": "e8cc382d8ceb7a89b234aa94f6a8a89089a2c31e0df01e93c06c497cf329a1e8",
+    "literature/primary_recheck_20261118/RECHECK_32_ZH.md": "d4f77295b5a767f772e4efe90ade49023d1c85ced159e1eb784f6fb313ce696e",
     "literature/review_classifications.json": "b51e2d3aa9462f33d3d5ba4218776eb18b27de69b47d26130ee5491f5ed16fe9",
     "literature/review_inventory_support/README.md": "7f4166c29a934c8ec911dfb6c97420d5befb9d46d48d92c37a58bb911c2d22e7",
     "literature/review_inventory_support/cohort.json": "e6a4e023b68f633f552e08fcd2299ee36dd0b612b4e94ab822479f723b147503",
@@ -673,6 +681,6 @@
     "protocol/EXPERIMENT_HISTORY.md": "50a1b210014680e053f4180b02a89bdae2ef35360feefe803f205c3c751d98de",
     "protocol/PREMAIN_FREEZE_R2.json": "8f55b5622a0e90d538faea585e8d112cfa927922cefa0da07b7290646a2b9355",
     "protocol/PROTOCOL.md": "409644fa9029a166839bbe2b84b76e8d68c9ced5646fdebe47a136ca4f586bda",
-    "tools/verify_package.py": "420bb00668257c59573612dfece504e723bca84a4b83fc39c2446d4d1de13473"
+    "tools/verify_package.py": "5b96de54fa1db4d9ca2f504c6d16379ebd9e20270139ef6884f7ee1e7d01ce3e"
   }
 }

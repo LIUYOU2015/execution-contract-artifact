@@ -1,0 +1,1181 @@
+{
+  "audit_id": "20261118-assertion-recheck-01",
+  "completed_date": "2026-11-18",
+  "audit_type": "model-assisted direct primary-source verification performed by coordinating assistant",
+  "selected": 32,
+  "completed": 32,
+  "pending": 0,
+  "verdict_counts": {
+    "supported": 28,
+    "supported_with_precision_note": 4
+  },
+  "human_checks_added_by_this_pass": 0,
+  "existing_human_provenance": "One completed guided check(RT-02);RT-03hasA/B/Cpartialconfirmations. This model pass does not convert partial/unreviewed human items into human completion.",
+  "native_trials_added": 0,
+  "records": [
+    {
+      "claim_id": "A0",
+      "case_id": "M5",
+      "work_id": "aries-2607.29069",
+      "statement_to_check": "Separate task initial state/instructions/evaluator from harness/backend/sandbox/telemetry configuration; correlate trajectories/events with causal and ordering metadata.",
+      "source": "papers/aries-2607.29069/source/aries-2607.29069v2.txt",
+      "source_version": "2607.29069v2 2026-11-03",
+      "locator_to_start": "§3 lines485–513",
+      "scope_to_preserve": "Sameconditions can be re-instantiated; deterministic trajectory replay is not established.",
+      "previous_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "status": "completed",
+      "observation": "Taskspec containsinstructions/initialstate/successcriterion;executionspec chooses harness/modelbackend/sandbox/telemetry. Events propagatetrajectory/eventIDs andcausal/order metadata. Sourceexplicitlyallows differingactions/outcomes withmodeloutputs andexternaldependencies; controlledconditions are not deterministictrajectoryguarantees.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "checked_locations": [
+        "§3specifications/correlation/adapters"
+      ],
+      "evidence_type": "author_described_design",
+      "final_statement": "Aries separates task/evaluator conditions from executionstack configuration and correlates telemetry byIDs/dependencies/sequence metadata.",
+      "manuscript_action": "Retain condition/eventprovenance framing, not deterministic replay correctness.",
+      "primary_url": "https://arxiv.org/abs/2607.29069v2",
+      "summary_zh": "任务/评估器与执行配置分开；传播轨迹及顺序元数据，未承诺确定性轨迹。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Separate task/evaluator conditions from execution settings; correlation metadata does not guarantee deterministic trajectories."
+    },
+    {
+      "claim_id": "A1",
+      "case_id": "M5",
+      "work_id": "aries-2607.29069",
+      "statement_to_check": "Production subset: eight hours, ten LLM-serving instances, minute-sampled CPU/memory from 100 sandboxes.",
+      "source": "papers/aries-2607.29069/source/aries-2607.29069v2.txt",
+      "source_version": "2607.29069v2",
+      "locator_to_start": "§4 lines518–519;§4.3 lines691–697",
+      "scope_to_preserve": "Preserve source count wording by location; exact population beyond the statedsubset remains uncertain.",
+      "previous_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "status": "completed",
+      "observation": "Openingreports8hours,10LLMservinginstances andminuteCPU/memorysamplesfrom100sandboxes. Later§4.3saysover100sandboxescohostingharness/tools. Exactpopulationcorrespondence is not supplied. Productiontraceslack synchronizedcrosslayerevents;controlledone-second traces areseparate.",
+      "verdict": "supported_with_precision_note",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "checked_locations": [
+        "§4opening",
+        "§4.3productiondescription/Figure8caption"
+      ],
+      "evidence_type": "author_reported_trace_description",
+      "final_statement": "The opening describes an8hourtracefrom10LLMinstances and100minute-sampledsandboxes; later§4.3saysover100. Preserve both descriptions rather than asserting a reconciled exact population.",
+      "manuscript_action": "Keep controlled/production scopes separate; documentary record notes100versusover100 discrepancy.",
+      "primary_url": "https://arxiv.org/abs/2607.29069v2",
+      "summary_zh": "开头写100个sandbox，后文写over100；记录两种口径，不声称精确样本数已统一。",
+      "disposition": "precision note recorded in detailed evidence",
+      "summary_en": "The opening says 100 sandboxes and the later section says over 100. Preserve both descriptions instead of claiming a reconciled exact count."
+    },
+    {
+      "claim_id": "A2",
+      "case_id": "M5",
+      "work_id": "aries-2607.29069",
+      "statement_to_check": "20 tasks per benchmark selected for approximately 50% OpenClaw success, each repeated five times.",
+      "source": "papers/aries-2607.29069/source/aries-2607.29069v2.txt",
+      "source_version": "2607.29069v2",
+      "locator_to_start": "§4 lines535–557",
+      "scope_to_preserve": "Nominal100 task-runs is not proof all100 completed; selection is conditional rather than representative.",
+      "previous_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "status": "completed",
+      "observation": "20tasks perbenchmarkselectedtoachieveabout50%OpenClawtasksuccess;5repeats/task. Dockercontrolledsandboxes;defaultQwen3.6-35B-A3B-FP8/SGLang,96coreH10094GBnode. §4.3resourceexperiment insteadusescloudDeepSeekV4Flash/one-second collection.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "checked_locations": [
+        "§4controlledconfiguration"
+      ],
+      "evidence_type": "author_reported_sample_configuration",
+      "final_statement": "Controlled tasks are20perbenchmark chosen for approximately50%OpenClawsuccess and repeated5times, under stated condition-dependent model/backend settings.",
+      "manuscript_action": "Do not treat the conditional task sample or defaultmodel as applying unchanged to everyresource result.",
+      "primary_url": "https://arxiv.org/abs/2607.29069v2",
+      "summary_zh": "每基准20题、按OpenClaw约50%成功率选题、每题5次；资源实验与默认模型设置分开。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Preserve the conditional task selection, five repeats and the distinction between default and resource-experiment model settings."
+    },
+    {
+      "claim_id": "A7",
+      "case_id": "M5",
+      "work_id": "aries-2607.29069",
+      "statement_to_check": "Controlled one-second OpenClaw/Hermes measurements report CPU and memory idle for more than80% and50% oftime, respectively; tool-call-conditioned idle fractions are below20% forboth.",
+      "source": "papers/aries-2607.29069/source/aries-2607.29069v2.txt",
+      "source_version": "2607.29069v2",
+      "locator_to_start": "§4.3 lines697–733;Fig9",
+      "scope_to_preserve": "Make idle explicit for memory; do not transfer controlled1s fractions to production1min trace.",
+      "previous_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "status": "completed",
+      "observation": "Sourceone-secondcontrolledOpenClaw/Hermesprose saysCPUidle>80%oftime andmemoryidle>50%;tool-call-conditionedidle<20%forboth. MinuteproductionFigure8is a separate population and normalizedforanonymization. Idle follows sourcewording, not a verifiedreclaimable-memorypostcondition.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "checked_locations": [
+        "§4.3/Figure9caption and result paragraph"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "Controlledone-second samples report source-definedCPU/memoryidlefractions>80%/>50%,withtool-call-conditionedidle<20%; separatefromminuteproductiontraces.",
+      "manuscript_action": "Retain idle/time/controlledpopulation qualifiers, avoiding memory-utilization or reclaimability substitution.",
+      "primary_url": "https://arxiv.org/abs/2607.29069v2",
+      "summary_zh": "受控秒级样本的CPU/内存idle时间分别>80%/>50%；不能替换成内存利用率或可回收性保证。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Idle-time fractions refer to the controlled second-level samples and source-defined idle wording, not memory utilization or reclaimability."
+    },
+    {
+      "claim_id": "A8",
+      "case_id": "M5",
+      "work_id": "aries-2607.29069",
+      "statement_to_check": "Immediate teardown decreases instance cost 65% but modeled total customer bill is 4.9x persistent; ideal approximately 3x saving.",
+      "source": "papers/aries-2607.29069/source/aries-2607.29069v2.txt",
+      "source_version": "2607.29069v2",
+      "locator_to_start": "§4.3 lines702–745;Fig10",
+      "scope_to_preserve": "Change coarse evidence tag to projection; no measured native Lambda snapshotpolicy benefit.",
+      "previous_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "status": "completed",
+      "observation": "Sourceexplicitlyanalyticallyreplays recordedtoolcalls againstAWSLambdaMicroVMpricing;DeepResearchexcluded. Immediate teardown lowersinstancecost65%buttotalmodeledbill4.9×persistent;idealmodel~3×saving. No nativepolicyimplementation timing/correctness benefit is established by the replay.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aries-2607.29069/source/aries-2607.29069v2.txt": "4dbbacfb219be1056fac800bc3d6eea7e394949de390dea794404977408ac49e"
+      },
+      "checked_locations": [
+        "§4.3pricingreplay/Figure10"
+      ],
+      "evidence_type": "analytical_projection",
+      "final_statement": "In the sourceanalyticalpricingreplay,immediateteardown reducesinstancecost65%butincreasesmodeledtotalbillto4.9×persistent; an idealizedmodel gives~3×saving.",
+      "manuscript_action": "Retain analytical/model/bill qualifiers; no originalfunctionality benchmark or causal policy benefit.",
+      "primary_url": "https://arxiv.org/abs/2607.29069v2",
+      "summary_zh": "65%、4.9倍和理想约3倍来自分析性计价回放，不作为原生恢复策略的实测收益。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The 65%, 4.9-fold and idealized threefold results come from analytical pricing replay, not native policy measurements."
+    },
+    {
+      "claim_id": "AF-C1",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "Typed pools, same-ID reuse, async bounded-capacity waits, rollout/global ownership",
+      "source": "papers/agentfly-2507.14897/source-v3.txt",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "§2.2.2–2.2.4 lines307–348;Fig3",
+      "scope_to_preserve": "Resource-interface/lifetime specification is distinct from cancellation/fairness/reset correctness evaluation.",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b"
+      },
+      "status": "completed",
+      "observation": "Resource specifications define typedpools, callerIDreuse,maxcapacity asynchronouswaits androllout/global scopes. Contextsignalsrollout completion/release; runner/backendpluggability isdescribed. This is source-described scheduling/lifecycle, not proof of cleanup under every failure.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "§2.2.2–2.2.4/Figure3"
+      ],
+      "evidence_type": "author_described_design",
+      "final_statement": "AgentFlydescribes typed pools, same-IDlive-instance reuse, asynchronously boundedcapacity, and rollout/global resource lifetimes.",
+      "manuscript_action": "Retain scoped lifecycle description and separate failure evidence.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "类型池、同ID复用、容量异步等待、rollout/global作用域与正文一致。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Typed pools, same-ID reuse, asynchronous capacity waits and rollout/global lifetimes match the described design."
+    },
+    {
+      "claim_id": "AF-C2",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "ScienceWorld training-step time falls66.95 to1.86min with pool1 to64",
+      "source": "papers/agentfly-2507.14897/source-v3.txt",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "§4.1 lines474–487;AppendixB1591–1605;Fig5 resource_scaling_af.svg.png visually checked",
+      "scope_to_preserve": "One resource-scaling experiment; no independent repetition or failure denominator inferred.",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41"
+      },
+      "status": "completed",
+      "observation": "OriginalFigure5labels66.95minatpool1 and1.86at64. Same-sourceAppendixBfixesQwen2.5-3B,GRPO,8H200,64tasks×8trajectories,20turns/context16384,etc.; onlymaxpoolcapacityvaries. Axis istrainingtimeperstep,notstartuporresource-normalizedcost.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "§4.1",
+        "AppendixBScienceWorld",
+        "originalFigure5"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "ReportedScienceWorld training-step time falls66.95→1.86min as poolcapacity increases1→64 under the listedfixedtrainingconfiguration.",
+      "manuscript_action": "Keep training-step endpoint and resource-number variation, not cold-start or equal-cost claim.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "原图66.95→1.86分钟对应pool1→64；端点为训练step，非冷启动或同成本效果。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The reported 66.95-to-1.86-minute change measures training-step time while pool capacity grows from 1 to 64."
+    },
+    {
+      "claim_id": "AF-C3",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "WebShop throughput E2E/rollout2.53/3.98 versus1.25/1.74 and1.44/2.20 trajectories/s",
+      "source": "papers/agentfly-2507.14897/source-v3.txt",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "§4.2 lines488–515;AppendixB1612–1671;Fig7 throughput_af.svg.png visually checked",
+      "scope_to_preserve": "Table5 differs incontext/history/TP/minibatch/KL; framework effect not isolated resource-engine causality.",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818"
+      },
+      "status": "completed",
+      "observation": "ReadoriginalFigure7values:AgentFly2.53/3.98,verl-agent1.25/1.74,RAGEN1.44/2.20trajectories/s(endtoend/rollout). Same8H200,total32×8trajectories buthistory/context,turntokens,step-sampleminibatch,KLestimator andTP differ. Averagedstepsafter5warmups; SDacrosssteps isnotindependenttrialuncertainty.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "§4.2/Figure7",
+        "AppendixBTable5"
+      ],
+      "evidence_type": "author_reported_framework_comparison",
+      "final_statement": "ReportedWebShopE2E/rolloutthroughputs are2.53/3.98versus1.25/1.74and1.44/2.20trajectories/s under distinctframework configurations.",
+      "manuscript_action": "Do not assign the framework throughput gap causally to the resourceengine alone.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "WebShop六个吞吐值一致；context/history/TP等设置不同，误差条为跨step标准差。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The six WebShop values match, while scaffolds/settings differ. Error bars describe variation across steps, not independent trials."
+    },
+    {
+      "claim_id": "AF-C4",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "R2E throughput E2E/rollout .123/.137 versus SkyRL .033/.035 trajectories/s",
+      "source": "papers/agentfly-2507.14897/source-v3.txt",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "§4.2 lines501–515;AppendixB1675–1735;Fig7 visually checked",
+      "scope_to_preserve": "Scaffold,LR,group,KLandentropy differ; rollout-only denominator wording differs(generationtime vsfullinteraction).",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818"
+      },
+      "status": "completed",
+      "observation": "OriginalR2EFigure7givesAgentFly.123/.137vsSkyRL.033/.035trajectories/s. Table6sharesenroot/model/64trajectories butscaffold,task×group8×8vs16×4,learningrate,KL,entropy/context differ. Appendixdescribesrollout-only denominator asgenerationtime; preservethatwording rather than assume identical timer semantics acrossbenchmarks. First10steps,averagingafter2warmups; SDacrosssteps.",
+      "verdict": "supported_with_precision_note",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "§4.2/Figure7",
+        "AppendixBTable6"
+      ],
+      "evidence_type": "author_reported_framework_comparison",
+      "final_statement": "ReportedR2E-GymE2E/rollout-onlythroughputs are.123/.137and.033/.035trajectories/s; the appendix calls the rollout-only denominator generationtime and lists differingframework/scaffold settings.",
+      "manuscript_action": "Use reported rollout-only label; no claim of matching timer semantics or a resource-engine-only effect.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "R2E四个值一致；附录将rollout-only分母称generation time，保留原标签并记录设置差异。",
+      "disposition": "precision note recorded in detailed evidence",
+      "summary_en": "The four R2E values match. The appendix calls the rollout-only denominator generation time; preserve this wording and the configuration differences."
+    },
+    {
+      "claim_id": "AF-C6",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "Fault/timeout/cancellation/missing sample denominator not separately tabulated for throughput",
+      "source": "papers/agentfly-2507.14897/source-v3.txt",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "§4.2;AppendixB Tables5–6;paper search timeout/failure/cancel/missing",
+      "scope_to_preserve": "Only throughput evaluation reporting is assessed; not everytool behavior or absence of code capabilities.",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b"
+      },
+      "status": "completed",
+      "observation": "Inspected relevantthroughputdefinitions andall tablefields. Workload/group/warmup/stepmeasurementwindowis given; failed/timeout/cancelled/missing trajectory denominators are notseparatelytabulatedthere. Thisdoesnot imply frameworklacksoffault handling.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "§4.2caption/throughputdescription",
+        "AppendixBWebShop/R2ETables5–6"
+      ],
+      "evidence_type": "bounded_documentary_reporting_gap",
+      "final_statement": "The reviewedthroughput section and configuration tables do not separatelytabulate failure,timeout,cancellation ormissing-sample denominators.",
+      "manuscript_action": "Retain bounded reporting-gap language, not feature absence.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "相关吞吐章节/配置表未单列失败、超时、取消和缺失分母；判断限于该报告范围。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The inspected throughput section/tables do not separately tabulate fault/timeout/cancellation/missing denominators; this is a bounded reporting claim."
+    },
+    {
+      "claim_id": "AF-C7",
+      "case_id": "M7",
+      "work_id": "agentfly-2507.14897",
+      "statement_to_check": "Cutoff code defines resource-close and real-enroot owner-death cleanup tests",
+      "source": "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py",
+      "source_version": "2507.14897v3 2026-10-09;separatecodeea275a1a284da6fd808568b8f8469a8f016516bd 2026-10-27",
+      "locator_to_start": "test_orphan_sweep_enroot.py1–191;test_engine_close.py1–79;commit-cutoff.json",
+      "scope_to_preserve": "Not executed;requiresenroot/cachedimage. CommitOct27postdatespaperOct9; no inference of testpass or paper-run faultrobustness.",
+      "previous_source_hashes": {
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "status": "completed",
+      "observation": "Directly readreal-enroot tests coveringkilled/exited/crashed/liveowners,close,reuse,unrecordedcontainer sentinel andsweep-off; fake-resourceclose tests cover concurrentcleanup despitefailures. Implementationjudgesowner onlysame machine/PIDnamespace usingPID/starttime;unknownreturnsNone. Testsnotexecuted. CodecommitOct27postdatesv3paperOct9, so definitions are laterartifactevidence,notpaper-time executedresults.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/agentfly-2507.14897/source-v3.txt": "9d6180a3c767d4cda9676d737790dad138755ba5dda2620cebea96a4e55ef63b",
+        "papers/agentfly-2507.14897/resource_scaling_af.svg.png": "9c30bf2c79c53719d681523a32a1b3e3954bfab6d5f93dd92beeac0b6b9b9e41",
+        "papers/agentfly-2507.14897/throughput_af.svg.png": "05d0e7a7ec7cf78bcc8bc109b49d242237b325b774559146b866af9313ad1818",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_orphan_sweep_enroot.py": "5e777bf7ee465d0adbbfa9398d63fe4553158aa9d47c22a90fcce1004bd817ad",
+        "papers/agentfly-2507.14897/code-cutoff/tests/unit/resources/test_engine_close.py": "d5fc31841082f040a6f85a1a131d422bc5f62b0cf40f9ac5476b721bb4b57331",
+        "papers/agentfly-2507.14897/code-cutoff/src/agentfly/resources/containers/enroot_containers.py": "2fece5b9adb2e6bea13d0ab03e1c8c5ac4671a15df2097dae2dcbaee14c97b8b",
+        "papers/agentfly-2507.14897/commit-cutoff.json": "6df7f38d2bba7ab9da40d32b670794bf92a6905f77242efadf2a8dc07ec5da68"
+      },
+      "checked_locations": [
+        "cutofftests/unit/resources/test_orphan_sweep_enroot.py1–191",
+        "test_engine_close.py1–79",
+        "enroot_containers.pyowner_alive/sweep",
+        "commit-cutoff.json andpaperheader"
+      ],
+      "evidence_type": "inspected_test_definition_and_static_code",
+      "final_statement": "PinnedOct27code defines resourceclose and real-enrootowner-death tests; owner checks are scoped to matchingmachine/PIDnamespace. Their presence does not establish execution or paper-time results.",
+      "manuscript_action": "Retain code/paper dates, static-versus-executed distinction and owner-scope limit.",
+      "primary_url": "https://arxiv.org/abs/2507.14897v3",
+      "summary_zh": "固定代码定义close和真实enroot owner-death测试；未执行。代码晚于论文，同机/PID命名空间条件保留。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The pinned artifact defines close and real-enroot owner-death tests. They were not executed here and postdate the reviewed paper."
+    },
+    {
+      "claim_id": "AW-N1",
+      "case_id": "M6",
+      "work_id": "aworld-2508.20404",
+      "statement_to_check": "The reviewed paper describes recovery architecture, but its Section3 evaluation does not establish quantitative acquisition/reset or fault-window cleanup postconditions.",
+      "source": "papers/aworld-2508.20404/sources/paper-v2.txt",
+      "source_version": "2508.20404v2",
+      "locator_to_start": "Body§§1–5 lines67–311;all methods/results,tables1–3,figures1–6 captions",
+      "scope_to_preserve": "Replace broad compound non-reporting assertion with bounded statement about missing quantitative lifecyclefault/ready/reset evaluation in Sec.3; no capability absence claim.",
+      "previous_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "status": "completed",
+      "observation": "Directly inspectedsourcebody with relevant figure/tablecaptions. §2describes failed-agentnotifications, remotestorage/centraltraceserver andrapidrecovery. §3reports tool inventory,pass@k,layouttiming andtraining/pass@1, not measured acquisition/reset/cleanupfaultpostconditions. Boundnegativeclaim to§3evaluation; architecture recoverycapability is not absent.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "checked_locations": [
+        "§2.2errorhandling",
+        "§2.3stateconsistency",
+        "§3.1–3.4/Table1–3/Figure6",
+        "§4–5"
+      ],
+      "evidence_type": "bounded_documentary_evaluation_scope",
+      "final_statement": "The reviewedpaper describes recoveryarchitecture; its§3evaluation doesnot quantify lifecycle-acquisition/resetor fault-windowcleanup postconditions.",
+      "manuscript_action": "Retain source-section bound and acknowledge recovery architecture; no assertion that recovery does not exist.",
+      "primary_url": "https://arxiv.org/abs/2508.20404v2",
+      "summary_zh": "第2节确有恢复架构；第3节缺少量化生命周期后条件评测，不能写恢复功能不存在。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Section 2 describes recovery architecture; Section 3 does not quantify the selected lifecycle postconditions. Do not infer absent functionality."
+    },
+    {
+      "claim_id": "AW-Q1",
+      "case_id": "M6",
+      "work_id": "aworld-2508.20404",
+      "statement_to_check": "The distributed AWorld Executor reports 525 s rollout versus 7695 s for a sequential single-node executor, a reported 14.6× rollout wall-time speedup.",
+      "source": "papers/aworld-2508.20404/sources/paper-v2.txt",
+      "source_version": "2508.20404v2 2025-09-01",
+      "locator_to_start": "§3.1 lines181–193;§3.3 lines229–245;Table2",
+      "scope_to_preserve": "Comparison changes executionlayout; resources/concurrency/repetition/failure details cannot support sandbox-only causality.",
+      "previous_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "status": "completed",
+      "observation": "Table2distributedrollout525s versus single-node sequential7695s. Sourcecalls14.6x; printedratio14.6571429. Sourcearguesnaivesingle-nodeparallelisunstable butdoesnot supply matchedparallelmeasurementhere. Distributedexecutioncomparison is supported, engine-onlycausality/resources-normalizedrankisnot.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "checked_locations": [
+        "§3.1setup",
+        "§3.3Table2andbaseline justification"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "Reported distributed versus sequential rollout times are525/7695s,authorreported14.6x; ratiofromprintedtimes14.66.",
+      "manuscript_action": "Retain comparator/layout and distinct reported versus calculated ratio.",
+      "primary_url": "https://arxiv.org/abs/2508.20404v2",
+      "summary_zh": "7695/525=14.657；保留作者报告14.6及印刷值计算14.66，比较对象为顺序/分布式布局。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Preserve the distributed/sequential comparator and distinguish the reported 14.6 ratio from the printed-time ratio of 14.66."
+    },
+    {
+      "claim_id": "AW-Q2",
+      "case_id": "M6",
+      "work_id": "aworld-2508.20404",
+      "statement_to_check": "Table 2 reports 144 s training in both arms; complete cycle 669 s distributed versus 7839 s sequential.",
+      "source": "papers/aworld-2508.20404/sources/paper-v2.txt",
+      "source_version": "2508.20404v2 2025-09-01",
+      "locator_to_start": "§3.1 lines181–193;§3.3 lines229–245;Table2",
+      "scope_to_preserve": "14.6x is rollout-only; total-cycle ratio11.72 is distinct from converged training cost/time.",
+      "previous_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "status": "completed",
+      "observation": "Training144sbotharms;525+144=669and7695+144=7839. Printedcycle ratio7839/669=11.7174888. This is onecyclewalltime,not convergence-normalizedlearningcost.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/aworld-2508.20404/sources/paper-v2.txt": "8cb3365bdf52656763edc0bb8e7b19016df16de06a2c10b4700f9e03e0686864"
+      },
+      "checked_locations": [
+        "§3.3Table2",
+        "§3.4training process"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "Training remains144swhile completecycleis669sdistributedversus7839ssequential; printedcycle ratio≈11.72.",
+      "manuscript_action": "Retain same-trainingtime and one-cycle endpoint; no learning-cost claim.",
+      "primary_url": "https://arxiv.org/abs/2508.20404v2",
+      "summary_zh": "训练时间两边均144秒；7839/669=11.7175，为一周期墙钟比值。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Training is 144 seconds in both arms; the complete-cycle ratio is 11.72, rather than a convergence-normalized learning-cost result."
+    },
+    {
+      "claim_id": "D1",
+      "case_id": "M3",
+      "work_id": "dsec-2609.22978",
+      "statement_to_check": "One production scale unit reportedly serves about 3M sandbox instances/day, ~380K peak concurrent sandboxes and >5K creations/s.",
+      "source": "papers/dsec-2609.22978/source/paper-v1.txt",
+      "source_version": "2609.22978v1",
+      "locator_to_start": "§2.4 lines323–328;§4 lines421–482",
+      "scope_to_preserve": "Live concurrency is not simultaneous useful commands; dates/failure denominator remain unknown.",
+      "previous_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "status": "completed",
+      "observation": "Reread deployment scope: one scaleunit nearly160CPU nodes/30Kcores/~250TBDRAM; typicalday~3Minstances,peak~380K,creation>5000/s. Workloads retain state whileCPU intermittent. These are productioninstance counters, not simultaneously useful commands or successful task throughput.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "checked_locations": [
+        "§2.4",
+        "§4.1–4.3"
+      ],
+      "evidence_type": "author_reported_production_observation",
+      "final_statement": "A single DSecproduction scaleunit reportedly servesabout3Msandboxinstances/day,~380Kpeakconcurrentinstances and>5000creations/s.",
+      "manuscript_action": "Retain production/instance qualifier; no cross-system concurrency ranking.",
+      "primary_url": "https://arxiv.org/abs/2609.22978v1",
+      "summary_zh": "3M/日、380K峰值、>5000创建/秒属于单个生产scale unit的实例规模，不能等同有效任务吞吐。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Production instance counts describe one scale unit, rather than useful-command concurrency or successful task throughput."
+    },
+    {
+      "claim_id": "D12",
+      "case_id": "M3",
+      "work_id": "dsec-2609.22978",
+      "statement_to_check": "Framework integration is explicitly outside the quantitative evaluation scope.",
+      "source": "papers/dsec-2609.22978/source/paper-v1.txt",
+      "source_version": "2609.22978v1",
+      "locator_to_start": "§8 opening lines709–710",
+      "scope_to_preserve": "Specified pause/replay integration is not quantitative correctness evidence.",
+      "previous_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "status": "completed",
+      "observation": "Evaluation explicitly coversimage loading,composablelayers,memoryoptimization andCPUQoS. It explicitly puts frameworkintegration outsideevaluation scope.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "checked_locations": [
+        "§8opening"
+      ],
+      "evidence_type": "author_reported_evaluation_scope",
+      "final_statement": "The quantitative evaluation excludes framework integration.",
+      "manuscript_action": "Retain distinction between infrastructure mechanism results and demonstrated training integration.",
+      "primary_url": "https://arxiv.org/abs/2609.22978v1",
+      "summary_zh": "原文评测开头明确排除训练框架集成的量化评测。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The quantitative evaluation explicitly excludes training-framework integration."
+    },
+    {
+      "claim_id": "D16",
+      "case_id": "M3",
+      "work_id": "dsec-2609.22978",
+      "statement_to_check": "CPU/memory and image evaluations use a separate ten-node fleet, Linux 7.0 hosts and Linux 6.1 microVM guests.",
+      "source": "papers/dsec-2609.22978/source/paper-v1.txt",
+      "source_version": "2609.22978v1",
+      "locator_to_start": "§8.1 lines711–725",
+      "scope_to_preserve": "Backend hardware differs; no normalized cross-backend ranking inferred.",
+      "previous_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "status": "completed",
+      "observation": "Separate10-nodeCPUtestcluster explicitlyseparatefromproduction. MicroVMnodesbaremetal2socket×96cores×2SMT,1.5TBDRAM;containersinsideQEMUVMon1socket×96cores×2SMT,512GB. AllhostsLinux7.0,guests6.1. Configurations are source-authored, not independently normalized.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "checked_locations": [
+        "§8.1Hardware/Kernel versions/Workloads"
+      ],
+      "evidence_type": "author_reported_configuration",
+      "final_statement": "Dedicated10-node evaluationcluster is separate fromproduction; reportedhostLinux7.0andmicroVMguest6.1. Backendhardware layouts differ and are explicitly stated.",
+      "manuscript_action": "Do not conflate productionpopulation with controlledtestcluster or assert normalizedbackend ranking.",
+      "primary_url": "https://arxiv.org/abs/2609.22978v1",
+      "summary_zh": "10节点专用测试集群与生产部署分开；主机/guest内核及两类硬件布局按原文保留。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The dedicated ten-node evaluation cluster is separate from production; preserve the reported hardware and kernel configurations."
+    },
+    {
+      "claim_id": "D5",
+      "case_id": "M3",
+      "work_id": "dsec-2609.22978",
+      "statement_to_check": "Virtio-pmem+DAX lowers peak host memory 40.2%; DAMON+balloon FPR alone lowers integrated host memory 21.2% with peak largely unchanged; pmem raises transient CPU peak 26.5% to 41.4%.",
+      "source": "papers/dsec-2609.22978/source/paper-v1.txt",
+      "source_version": "2609.22978v1",
+      "locator_to_start": "§8.4 lines747–755;Fig12",
+      "scope_to_preserve": "Peak/integral/CPUpercent are distinct; cold-access explanation is partial, not isolated proof.",
+      "previous_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "status": "completed",
+      "observation": "FourFirecracker configurations comparebaseline,pmem+DAX,FPRalone,both. Pmem peakhostmemory reduction40.2%;FPRalone integratedhostmemory reduction21.2%withpeaklargelyunchanged;transientCPUpeak26.5→41.4%. Source suggests possiblecold-accesscause but does not isolate it.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/dsec-2609.22978/source/paper-v1.txt": "479bf502281664986ec0d67b2a5665f5dd3e914463dec3f6bbc8bdd7cda08716"
+      },
+      "checked_locations": [
+        "§8.4/Figure12caption and result paragraphs"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "Pmem+DAXreducesreportedpeakhostmemory40.2%;DAMON+balloonFPRalone reduces time-integratedhostmemory21.2%; pmem raises reportedtransientCPUpeak26.5%to41.4%.",
+      "manuscript_action": "Keep separate mechanisms, peak versus integral, and CPU metric; retain no causal CPU explanation.",
+      "primary_url": "https://arxiv.org/abs/2609.22978v1",
+      "summary_zh": "40.2%为峰值主机内存；21.2%为时间积分内存；26.5→41.4%为另一项瞬时CPU指标。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Peak memory, integrated memory and transient CPU utilization are distinct outcomes under separate mechanism comparisons."
+    },
+    {
+      "claim_id": "E01",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "Combined snapshot+restore at 0GB memory/disk: CRIU .060s, Docker .416s, Podman .835s, checkpoint-lite .418s, Hybrid 1.657s, AWS-VM 353s.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "§2.1 lines273–399;Table1;officialsaa2025-page3.png visually checked",
+      "scope_to_preserve": "Toolscoverdifferentstate;AWSconfigurationunknown. No restore-only ranking or equal-state assumption.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Both originaltableimagesagree:modifiedmemory/disk0GB/0GB givesCRIU.060,Docker.416,Podman.835,checkpoint-lite.418,Hybrid1.657,AWS353s. Tableoperation isSnapshot+Restore. SourceHTMLtextduplicatesPodman.835; visualPDFis authoritative. Zero denotes variedmodified-stateamount,not totalVMmemory or fullstatelessness.",
+      "verdict": "supported_with_precision_note",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "§2.1",
+        "originalarXivPDFp3Table1",
+        "officialSAA25PDFp3Table1"
+      ],
+      "evidence_type": "author_reported_aggregate_measurement",
+      "final_statement": "With0GBmodifiedmemoryand0GBmodifieddisk, Table1combinedsnapshot+restorevalues are.060/.416/.835/.418/1.657/353s for the sixlistedmechanisms.",
+      "manuscript_action": "Retain combined endpoint and non-equivalentstatecoverage; clarify modified-state amounts in detailed record.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "两版PDF原表一致；0GB指修改量，表头为snapshot+restore合计；HTML重复单元以PDF核准。",
+      "disposition": "precision note recorded in detailed evidence",
+      "summary_en": "The original tables agree. Zero GB denotes the modified-state amount; all cells time snapshot plus restore, with different state coverage."
+    },
+    {
+      "claim_id": "E02",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "1/2GB modified memory, zero disk: CRIU .760/1.445s; checkpoint-lite 1.079/1.757s; Hybrid 9.921/18.154s combined snapshot+restore.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "§2.1 lines273–399;Table1;officialsaa2025-page3.png visually checked",
+      "scope_to_preserve": "Combinedinterval;GB/GiB wording differs inprose. Slash/dash cells are not zero/failure observations.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Memory-only1/2GBrows:CRIU.760/1.445,checkpoint-lite1.079/1.757,Hybrid9.921/18.154s. HeaderGBandproseGiBbothoccur; not silently normalized. Slash/dashundefined,notzero. Proserestore-only wording cannot be assigned to a component of the combinedtable without split evidence.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "§2.1/Table1",
+        "arXivandSAA25PDFp3"
+      ],
+      "evidence_type": "author_reported_aggregate_measurement",
+      "final_statement": "For1/2GBmodifiedmemory with0modifieddisk, reportedcombinedtimes areCRIU.760/1.445,checkpoint-lite1.079/1.757,Hybrid9.921/18.154s; retain originalunit ambiguity and missing markers.",
+      "manuscript_action": "No restore-only comparison or invented zero timing.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "内存单独变化的各值一致；保留GB/GiB不统一、slash/dash未知，不捏造restore-only拆分。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Memory-only row values match. Preserve GB/GiB ambiguity and undefined missing markers; do not invent component timings."
+    },
+    {
+      "claim_id": "E03",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "1/2GB modified disk, zero memory: Docker 5.097/6.915s; Podman 7.935/12.914s; checkpoint-lite 2.499/4.622s; Hybrid 14.735/26.648s combined snapshot+restore.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "§2.1 lines273–399;Table1;officialsaa2025-page3.png visually checked",
+      "scope_to_preserve": "Memory/disk varied independently; no simultaneous-nonzero condition or restore-only value inferred.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Disk-only1/2GBrows:Docker5.097/6.915,Podman7.935/12.914,checkpoint-lite2.499/4.622,Hybrid14.735/26.648s. Eachrowvariesmemoryordiskindependently; no jointlynonzerorow or snapshot/restore split.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "§2.1/Table1",
+        "arXivandSAA25PDFp3"
+      ],
+      "evidence_type": "author_reported_aggregate_measurement",
+      "final_statement": "For1/2GBmodifieddisk and0modifiedmemory, Table1combinedtimes match the listed Docker/Podman/checkpoint-lite/Hybrid values; jointstate variation and componenttimings unreported.",
+      "manuscript_action": "Retain independentmodified-domain sweep and combined endpoint.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "磁盘单独变化的各值一致；未报告内存/磁盘同时非零或操作拆分。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Disk-only row values match. Joint memory/disk variation and snapshot/restore splits are not supplied."
+    },
+    {
+      "claim_id": "E05",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "Distinguishes prefix replay, snapshot/restore, compensation/backtracking; minimum snapshot scope includes filesystem and memory.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "§2 lines208–267;Fig1",
+      "scope_to_preserve": "O(1) relates topathlength conceptually, not measured state-size independence or deterministic replay proof.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Sourceenumeratesprefixreplay,snapshot/restore,andcompensatingbacktracking. Minimumscope includesfilesystemandmemory; sourcearguessemantics, not measuredfull-state correctness for everyexternalservice.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "§2primitives/Figure1/minimumscope"
+      ],
+      "evidence_type": "conceptual_design_argument",
+      "final_statement": "The paper distinguishesprefixreplay,snapshot/restore andcompensation and argues for at least filesystem/memory coverage in richer stateful environments.",
+      "manuscript_action": "Present as source organizingargument, not universal reset-correctness proof.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "prefix replay、snapshot/restore、compensation及最小filesystem/memory范围为原文概念论证。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Replay, snapshot/restore, compensation and minimum state domains are conceptual arguments, rather than universal correctness measurements."
+    },
+    {
+      "claim_id": "E06",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "Native semantic forking, remote fork-aware effects, and visibility of tentative branches are future research challenges; checkpoint-lite is CRIU+OverlayFS prototype.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "§2.1 lines392–399;§3 lines407–457",
+      "scope_to_preserve": "Keep implemented checkpoint-lite separate from proposed nativefork/remoteeffects/consistency research.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Tablefootnoteandbodyexplicitlydescribe ownGoCRIU+OverlayFScheckpoint-liteprototypewithreportedtimings. §3nativeforkmicroseconds,remote-awareeffects andtentativevisibility are desiredcapabilities/researchdirections. Noimplementednativeforkbenchmark is given.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "§2.1prototype/Table1footnote",
+        "§3MissingPieces"
+      ],
+      "evidence_type": "author_reported_prototype_plus_research_agenda",
+      "final_statement": "Checkpoint-lite is a described/measuredCRIU+OverlayFSprototype; semanticnativeforks,remoteeffects andmultiagentvisibility remain researchdirections in this source.",
+      "manuscript_action": "Keep prototype versus proposednativefork distinction.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "checkpoint-lite是作者描述并计时的CRIU+OverlayFS原型；原生语义fork等属于研究议程。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The described checkpoint-lite prototype is measured; semantic native forks and remote/multi-agent effects remain research directions."
+    },
+    {
+      "claim_id": "E07",
+      "case_id": "M8",
+      "work_id": "exploration-2510.05556",
+      "statement_to_check": "The reviewed four-page paper reports aggregate snapshot-plus-restore timings and a prototype description; no executed lifecycle-fault evaluation or raw-trial/prototype-code link was identified within that source scope. Availability elsewhere was not assessed.",
+      "source": "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt",
+      "source_version": "2510.05556v1;officialSAA25Table1page3 visuallycrosschecked;byteidentitynotasserted",
+      "locator_to_start": "Fullbody§§1–3 lines169–457;Table1footnotes;references inspected for tool links",
+      "scope_to_preserve": "State only that reviewed paper supplies aggregate timing/prototype description, not demonstrated fault-window outcomes or an identified rawtrial/prototypecode link; availability elsewhere unassessed.",
+      "previous_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640"
+      },
+      "status": "completed",
+      "observation": "Readfullbody andtable/footnote,reviewedreferences/URLmatches andall4pagePDFURIannotations. Theylinkotherprojects/papers/authorORCIDs but give no checkpoint-litecode/rawtriallink withinthispaper. Noexecutedlifecycle-faultwindowevaluation described. Availabilityelsewhere notsearched orjudged.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.txt": "9e532cbcb6bf2925323c95e9959c51069fda64ac3ecb08a5bf3c03d721ea9b3f",
+        "papers/exploration-2510.05556/sources/arxiv-2510.05556v1.pdf": "52cfea2b246aee8c125ab60545f2468aa9753463e347409016343312abfa5640",
+        "papers/exploration-2510.05556/sources/saa2025-page3.png": "5f78466696d596a44518966e084e473b84c1b9aee7bfb725fefda564db864fe1",
+        "runs/20261118-assertion-recheck-01/readings/exploration-arxiv-page3.png": "6594b903531b3da28cc350a7e8c0ba6c766e4f4cb5e6126d53536cf19dc2662c"
+      },
+      "checked_locations": [
+        "entire§§1–3/Table1footnotes/references",
+        "allURIannotationsacross4PDFpages"
+      ],
+      "evidence_type": "bounded_documentary_evidence_gap",
+      "final_statement": "Within the reviewedfourpagepaper, aggregatecombinedtimings/prototypedescription are given, while lifecycle-faulttrials and a raw-trial/prototypecode link were not identified; no assertion about availabilityelsewhere.",
+      "manuscript_action": "Retain source-boundnegativewording, never capability absence or fieldprevalence.",
+      "primary_url": "https://arxiv.org/abs/2510.05556v1",
+      "summary_zh": "全文/表注/参考链接及4页PDF URI未给出原型代码、原始trial或生命周期故障评测；不判断来源之外的可用性。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The reviewed four-page source supplies no identified prototype-code/raw-trial link or executed lifecycle-fault study; availability elsewhere was not assessed."
+    },
+    {
+      "claim_id": "GKE-Q1",
+      "case_id": "M4",
+      "work_id": "gke-agent-sandbox-rl-20260929",
+      "statement_to_check": "Report gives average 44–85 s baseline vs 1.1–8.8 s SDK and maximum 450 s vs strictly under 10 s; no reported percentile in this table.",
+      "source": "papers/gke-agent-sandbox-rl-20260929/sources/report.txt",
+      "source_version": "report2026-09-29;cutoff code454d3353e5c26c561dd6de389f32f7f285030e38;publication-day codebcd282caf5babf9fa877027ad34186928acfa00c",
+      "locator_to_start": "Benchmarks lines280–348;table average/max rows",
+      "scope_to_preserve": "Table contains average/max, not a percentile; exact executed revision and raw failure-aware samples unresolved.",
+      "previous_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97"
+      },
+      "status": "completed",
+      "observation": "10nodegVisorpool;500SWEbenchimages and4578R2Eimages. Printedaverages44–85srawK8sversus1.1–8.8sSDK;maximum450sversusstrictly<10s. Concurrency500to18312. Tablelabelsaverageandmax, notP99. End-to-endgain/failurepopulationcannot be reconstructed from aggregate ranges.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/publication/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/fleet.py": "5174f005ff81921cffa3138d2dc809ca5cab9ab317cd4516ec710a84fa5cc4b0",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py": "b9ce338b75f5119f4a3a49e10465f0ac15e8d36a7bf29a77abcdcc5bb67e5276",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/recycle.py": "e8eafac96177354e47106d4520b55e10a0b1a044200ff1554d0b8aeee2b00bba",
+        "papers/gke-agent-sandbox-rl-20260929/sources/connector-provenance.json": "074d1907c949cc5dcd0fd66dbadabe0383876750f250ceed2b89d654091a2413"
+      },
+      "checked_locations": [
+        "ReportBenchmarks/TTFCtable"
+      ],
+      "evidence_type": "vendor_reported_measurement",
+      "final_statement": "The report listsaverageTTFC44–85sversus1.1–8.8s andmaximum450sversus<10s; no percentile is supplied in that table.",
+      "manuscript_action": "Retainaverage/max labels; do not relabelmaxasP99 or pair unmatched range endpoints.",
+      "primary_url": "https://cloud.google.com/blog/products/containers-kubernetes/accelerate-agentic-rl-with-gke-agent-sandbox",
+      "summary_zh": "表格给出平均和最大TTFC，不是P99；44–85/1.1–8.8秒、450/<10秒一致。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The report supplies average and maximum TTFC, not P99. Preserve the printed ranges and the strict under-ten-second maximum."
+    },
+    {
+      "claim_id": "GKE-RESOURCE",
+      "case_id": "M4",
+      "work_id": "gke-agent-sandbox-rl-20260929",
+      "statement_to_check": "RunReport has warm replica counts and phase total/max; these are SDK counters, not measured resource-time integrals or necessarily actual held-plus-warm pod population.",
+      "source": "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py",
+      "source_version": "report2026-09-29;cutoff code454d3353e5c26c561dd6de389f32f7f285030e38;publication-day codebcd282caf5babf9fa877027ad34186928acfa00c",
+      "locator_to_start": "RunReport134–191;Observer261–346;recycle.py278–287",
+      "scope_to_preserve": "Counters are not measured CPU/memory resource-time integrals or necessarily actual live podpopulation.",
+      "previous_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py": "b9ce338b75f5119f4a3a49e10465f0ac15e8d36a7bf29a77abcdcc5bb67e5276"
+      },
+      "status": "completed",
+      "observation": "RunReportstoresphase count,total,max andwarm additions/peak. Observerupdates logicalwarmgauges;recyclecomments explicitly distinguishheldsandboxes,removedwarmpools andtransient~2×peak. NoCPU/memory allocation integrals are produced by thosecounters.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/publication/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/fleet.py": "5174f005ff81921cffa3138d2dc809ca5cab9ab317cd4516ec710a84fa5cc4b0",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py": "b9ce338b75f5119f4a3a49e10465f0ac15e8d36a7bf29a77abcdcc5bb67e5276",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/recycle.py": "e8eafac96177354e47106d4520b55e10a0b1a044200ff1554d0b8aeee2b00bba",
+        "papers/gke-agent-sandbox-rl-20260929/sources/connector-provenance.json": "074d1907c949cc5dcd0fd66dbadabe0383876750f250ceed2b89d654091a2413"
+      },
+      "checked_locations": [
+        "RunReport134–191",
+        "Observerphase/warm_add/warm_remove252–350",
+        "recycle.py265–295"
+      ],
+      "evidence_type": "static_code_inspection",
+      "final_statement": "The inspectedRunReportwarm/phase counters are not measuredresource-timeintegrals or a direct census of allheld-plus-warmallocations.",
+      "manuscript_action": "Treat countersasaccountingevidence scope, not measured billing or occupiedcapacity integral.",
+      "primary_url": "https://cloud.google.com/blog/products/containers-kubernetes/accelerate-agentic-rl-with-gke-agent-sandbox",
+      "summary_zh": "暖池/阶段计数不是CPU或内存时间积分，held、warm及暂态峰值需区分。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Warm-replica and phase counters are not CPU/memory allocation integrals or a census of held-plus-warm capacity."
+    },
+    {
+      "claim_id": "GKE-TIMER",
+      "case_id": "M4",
+      "work_id": "gke-agent-sandbox-rl-20260929",
+      "statement_to_check": "Artifact claim statistics are summed phase durations/count and maximum; generic load-test process function only sleeps optionally and returns pod name, without executing a first command.",
+      "source": "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py",
+      "source_version": "report2026-09-29;cutoff code454d3353e5c26c561dd6de389f32f7f285030e38;publication-day codebcd282caf5babf9fa877027ad34186928acfa00c",
+      "locator_to_start": "loadtest.py103–132,337–421;fleet.py1521–1537;observability.py261–285;connector-provenance.json",
+      "scope_to_preserve": "This generic probe does not execute a firstcommand; headline-run mapping remains unresolved.",
+      "previous_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88"
+      },
+      "status": "completed",
+      "observation": "stage_metricsdivides summedphase durationsbycounts and keepsmax. Both genericprobe functions optionallysleepthenreturnpod_name without a command. claimphasewrapsSDKcreate/readiness; not a first-commandmeasurementitself. Publicationday/cutoffloadtestbytesmatch, but neither revision is established as the headlineexecutedrun.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/publication/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/fleet.py": "5174f005ff81921cffa3138d2dc809ca5cab9ab317cd4516ec710a84fa5cc4b0",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py": "b9ce338b75f5119f4a3a49e10465f0ac15e8d36a7bf29a77abcdcc5bb67e5276",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/recycle.py": "e8eafac96177354e47106d4520b55e10a0b1a044200ff1554d0b8aeee2b00bba",
+        "papers/gke-agent-sandbox-rl-20260929/sources/connector-provenance.json": "074d1907c949cc5dcd0fd66dbadabe0383876750f250ceed2b89d654091a2413"
+      },
+      "checked_locations": [
+        "loadtest.py95–132,337–421",
+        "fleet.py1510–1545",
+        "observability.pyphase",
+        "connector-provenance.json"
+      ],
+      "evidence_type": "static_code_inspection",
+      "final_statement": "The inspectedgenericloadtestrecordsclaim/processphase aggregates; itsprobe onlysleeps/returnspodname. These code endpoints do not alone reconstruct the reportfirst-commandendpoint.",
+      "manuscript_action": "Retain unresolvedheadline runmapping; do not say the vendor never executed a command.",
+      "primary_url": "https://cloud.google.com/blog/products/containers-kubernetes/accelerate-agentic-rl-with-gke-agent-sandbox",
+      "summary_zh": "generic probe仅可选sleep并返回pod名；claim阶段及total/count/max不自动等于报告首命令端点。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The inspected generic probe sleeps and returns a pod name. Its phase summaries do not independently establish the headline first-command endpoint."
+    },
+    {
+      "claim_id": "GKE-WARM",
+      "case_id": "M4",
+      "work_id": "gke-agent-sandbox-rl-20260929",
+      "statement_to_check": "Report explicitly moves image hydration before rollout requests and acknowledges CPU/background cluster time spent in warming.",
+      "source": "papers/gke-agent-sandbox-rl-20260929/sources/report.txt",
+      "source_version": "report2026-09-29;cutoff code454d3353e5c26c561dd6de389f32f7f285030e38;publication-day codebcd282caf5babf9fa877027ad34186928acfa00c",
+      "locator_to_start": "How we got here lines347–356;The trade-off lines417–420",
+      "scope_to_preserve": "Critical-path latency excludes earlier preparation; no integrated resource cost inferred.",
+      "previous_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97"
+      },
+      "status": "completed",
+      "observation": "Imagehydration completesbefore rollout request viaimagestreaming/upfrontpools; report explicitlyacknowledges upfrontCPU/backgroundclustertime. Fixed10nodebudget does not makepreparationfree.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/gke-agent-sandbox-rl-20260929/sources/report.txt": "7b7f108f7e2ae6366f78ff29d07a1aea2b19d59ccc591953ca7f54cfc85acd97",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/publication/tests/loadtest.py": "12c5ac6300ddaaf5258b9f24974d0944ccbf3a362b1b7136bf289b661cb95c88",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/fleet.py": "5174f005ff81921cffa3138d2dc809ca5cab9ab317cd4516ec710a84fa5cc4b0",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/observability.py": "b9ce338b75f5119f4a3a49e10465f0ac15e8d36a7bf29a77abcdcc5bb67e5276",
+        "papers/gke-agent-sandbox-rl-20260929/sources/code/agent_sandbox_rl/recycle.py": "e8eafac96177354e47106d4520b55e10a0b1a044200ff1554d0b8aeee2b00bba",
+        "papers/gke-agent-sandbox-rl-20260929/sources/connector-provenance.json": "074d1907c949cc5dcd0fd66dbadabe0383876750f250ceed2b89d654091a2413"
+      },
+      "checked_locations": [
+        "ReportHowwegot here",
+        "ReportThetrade-off"
+      ],
+      "evidence_type": "vendor_reported_design_and_tradeoff",
+      "final_statement": "The reportedcritical-pathlatencygain uses pre-requestimagehydration/warming and acknowledges CPU/background preparation.",
+      "manuscript_action": "Keepupfrontpreparation distinctfrom requesttiming and totalcost.",
+      "primary_url": "https://cloud.google.com/blog/products/containers-kubernetes/accelerate-agentic-rl-with-gke-agent-sandbox",
+      "summary_zh": "镜像水合和暖池准备位于请求前，原文承认前置CPU及后台集群时间。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The reported critical-path gain relies on preparation before requests; CPU and background cluster time remain part of the trade-off."
+    },
+    {
+      "claim_id": "RT-02",
+      "case_id": "M1",
+      "work_id": "rollout-tax-2607.01415",
+      "statement_to_check": "T0 p50 cold start: sandbox 0.162s, container 0.597s, orchestrated container 2.9s, cloud VM 17.9s; VM/sandbox approximately 110.5 from rounded values",
+      "source": "papers/rollout-tax-2607.01415/source.txt",
+      "source_version": "2607.01415v1",
+      "locator_to_start": "§3 lines282–298; §4.2 lines315–330; Fig2 PDF p3, saved page-3.png visually checked",
+      "scope_to_preserve": "Keep workload/readiness endpoint and unspecified exact products/configurations.",
+      "previous_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6",
+        "papers/rollout-tax-2607.01415/page-3.png": "6f33f9ae2be893a180f8377eed15c6d3b346c5bebdef65444dba470ccb717402"
+      },
+      "status": "completed",
+      "observation": "Directly reread setup/endpoints and originalFigure2. T0Sandbox162ms,Container597ms,orchestrated2.9s,VM17.9s; captionP50/median and100trials/config.17.9/.162=110.493827. Specificconfiguration scope is explicit in§6 and already added to currentTable5.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6",
+        "papers/rollout-tax-2607.01415/source.pdf": "eea2330406e163a29df33083a05391b9833c5fcf3e356f6ed2163ca9d39c51cf",
+        "papers/rollout-tax-2607.01415/page-3.png": "6f33f9ae2be893a180f8377eed15c6d3b346c5bebdef65444dba470ccb717402",
+        "papers/rollout-tax-2607.01415/page-4.png": "04868d206c78009933458b51bea84924b1f6336e6bc23f9c75639f7ae8f3b8eb"
+      },
+      "checked_locations": [
+        "§3/§4.2",
+        "originalPDFp3 Figure2",
+        "§6"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "In the source authors testedT0configuration, reportedp50startup values are0.162/0.597/2.9/17.9s for sandbox/container/orchestratedcontainer/cloudVM; ratio of displayedVM/Sandbox medians≈110.49.",
+      "manuscript_action": "Retain existing tested-T0qualification; no numeric change.",
+      "primary_url": "https://arxiv.org/abs/2607.01415v1",
+      "summary_zh": "原图T0四个中位数及单位一致；17.9/0.162=110.49，保留作者所测配置限定。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "Figure 2 confirms the four T0 medians and units; 17.9/0.162=110.49. Retain the source authors tested configuration."
+    },
+    {
+      "claim_id": "RT-03",
+      "case_id": "M1",
+      "work_id": "rollout-tax-2607.01415",
+      "statement_to_check": "T1 p50 1.2/1.6/4.2/18.8s; T2 18.0/19.6/25.5/33.9s for sandbox/container/orchestrated container/VM",
+      "source": "papers/rollout-tax-2607.01415/source.txt",
+      "source_version": "2607.01415v1",
+      "locator_to_start": "§3 lines282–298; §4.2 lines315–330; Fig2 PDF p3, saved page-3.png visually checked",
+      "scope_to_preserve": "Do not infer demonstrated unequal resources; source says controlled/comparable substrate conditions.",
+      "previous_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6",
+        "papers/rollout-tax-2607.01415/page-3.png": "6f33f9ae2be893a180f8377eed15c6d3b346c5bebdef65444dba470ccb717402"
+      },
+      "status": "completed",
+      "observation": "Direct originalfigure labels:T1=1.2/1.6/4.2/18.8s;T2=18.0/19.6/25.5/33.9s, same categoryorder.33.9/18=1.883333; sourceprose≈1.9. T1preloadsattrs;T2includesclone/inspection/patch/test. Comparison across tiers changes workload/preparation and does not isolate an individual mechanism as the cause of the ratio change.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6",
+        "papers/rollout-tax-2607.01415/source.pdf": "eea2330406e163a29df33083a05391b9833c5fcf3e356f6ed2163ca9d39c51cf",
+        "papers/rollout-tax-2607.01415/page-3.png": "6f33f9ae2be893a180f8377eed15c6d3b346c5bebdef65444dba470ccb717402",
+        "papers/rollout-tax-2607.01415/page-4.png": "04868d206c78009933458b51bea84924b1f6336e6bc23f9c75639f7ae8f3b8eb"
+      },
+      "checked_locations": [
+        "§3 T1/T2definitions",
+        "§4.2/originalFigure2",
+        "§6"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "The reportedT1p50values are1.2/1.6/4.2/18.8s andT2values18.0/19.6/25.5/33.9s. The displayedT2VM/Sandbox ratio is1.8833 under the statedpython/attrs task configuration.",
+      "manuscript_action": "Add explicitT2source-test scope andpython/attrsidentifier; preserve1.88x. Do not attribute the change to a proven resource mismatch or isolation-only cause.",
+      "primary_url": "https://arxiv.org/abs/2607.01415v1",
+      "summary_zh": "原图T1/T2八个值一致；T2比值1.8833。明确python/attrs及所测任务，保留工作负载/准备条件。",
+      "disposition": "applied to Table5",
+      "summary_en": "All eight T1/T2 medians match. The displayed T2 ratio is 1.8833; identify the python/attrs workload and preserve preparation/configuration scope."
+    },
+    {
+      "claim_id": "RT-05",
+      "case_id": "M1",
+      "work_id": "rollout-tax-2607.01415",
+      "statement_to_check": "Table 2 projects 11,811 vs 6,495 worker-hours and a 5,316-hour difference for one million 150-action trajectories from 42.5 vs 23.4 s latency",
+      "source": "papers/rollout-tax-2607.01415/source.txt",
+      "source_version": "2607.01415v1",
+      "locator_to_start": "§4.4 lines348–399,Eq2/Table2; §6 lines416–419",
+      "scope_to_preserve": "Printed42.5/23.4s are rounded; differences from printedhours fit rounding intervals. Change coarse evidence tag from measurement to projection.",
+      "previous_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6"
+      },
+      "status": "completed",
+      "observation": "Eq2H=N*L/3600 excludes inference/reward/optimizer/externalqueueing. Table2prints42.5/23.4s and11811/6495h, difference5316h for1M150actiontrajectories. Hours imply42.5196/23.382/19.1376s, consistent with printed0.1srounding. Printedtimes alone do not exactly reconstruct hours; unrounded values are not published in this passage.",
+      "verdict": "supported_with_precision_note",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/rollout-tax-2607.01415/source.txt": "b9a837bcddc15d7c8d7de290318cfb2e3bfcb5da108e612faafdc03dc0137fc6",
+        "papers/rollout-tax-2607.01415/source.pdf": "eea2330406e163a29df33083a05391b9833c5fcf3e356f6ed2163ca9d39c51cf",
+        "papers/rollout-tax-2607.01415/page-3.png": "6f33f9ae2be893a180f8377eed15c6d3b346c5bebdef65444dba470ccb717402",
+        "papers/rollout-tax-2607.01415/page-4.png": "04868d206c78009933458b51bea84924b1f6336e6bc23f9c75639f7ae8f3b8eb"
+      },
+      "checked_locations": [
+        "§4.4 Eq2/Table2 originalPDFp4",
+        "§6"
+      ],
+      "evidence_type": "analytical_projection",
+      "final_statement": "Table2reports projected11811versus6495worker-hours,difference5316,for1M150actiontrajectories. Its42.5/23.4sprintedlatencies are rounded; the printed hours are rounding-compatible but not exactly recoverable from those printed latencies.",
+      "manuscript_action": "Keepworker-hours labeledprojected; clarify rounding in the claim-level record, not a fabricated exact reconstruction.",
+      "primary_url": "https://arxiv.org/abs/2607.01415v1",
+      "summary_zh": "11811/6495/5316小时属于外推；印刷延迟有舍入，小时数与舍入区间相容但不能精确重建。",
+      "disposition": "precision note recorded in detailed evidence",
+      "summary_en": "The worker-hours are projections. Printed latency rounding is compatible with the reported hours, but does not reconstruct them exactly."
+    },
+    {
+      "claim_id": "S6",
+      "case_id": "M2",
+      "work_id": "sandman-2610.39711",
+      "statement_to_check": "Prewarming reduced grading acquisition but increased reserved vCPU-hours and did not establish steady-state training speedup.",
+      "source": "papers/sandman-2610.39711/source.txt",
+      "source_version": "2610.39711v2",
+      "locator_to_start": "§5.4 lines502–525; AppendixE lines1458–1501;TableA11",
+      "scope_to_preserve": "Equal-weight paired ratios differ from pooled2024/825; no established steady-state training benefit.",
+      "previous_source_hashes": {
+        "papers/sandman-2610.39711/source.txt": "a8f8ec3a3d39f75ad4aedc0678957fe3efb20cd7a3647c43ee15eb3c3179a1fc"
+      },
+      "status": "completed",
+      "observation": "Three16GPU pairs,128inflight,onlygradingprovisioningchanges; averageper-run medianacquisition6.177→.119s,93–96%hits. Idle2100s; originalpairedtotalreservedvCPUhourratio2.4613→2.46. Roundedhoursgive(681/281+652/249+691/295)/3=2.4614448; pooled2024/825=2.453333is different. Sourceexplicitlyincludesidlereservations/notCPUexecution. Steadystepdifference−8.7sCI[−38.4,+21.0]is inconclusive.",
+      "verdict": "supported",
+      "reviewed_date": "2026-11-18",
+      "reviewer_type": "coordinating_model_direct_primary_source_pass",
+      "human_check": false,
+      "read_source_hashes": {
+        "papers/sandman-2610.39711/source.txt": "a8f8ec3a3d39f75ad4aedc0678957fe3efb20cd7a3647c43ee15eb3c3179a1fc"
+      },
+      "checked_locations": [
+        "§5.4",
+        "AppendixE warm-poolA/B/TableA11"
+      ],
+      "evidence_type": "author_reported_measurement",
+      "final_statement": "In the paired study,warming lowers gradingacquisition but raises totalreserved sandboxvCPU-hours(includingidle),meanpairedratio2.46; steady-state training benefit is not established by the reportedCI.",
+      "manuscript_action": "Retain mean-paired/reserved/idle scope and inconclusive training statement.",
+      "primary_url": "https://arxiv.org/abs/2610.39711v2",
+      "summary_zh": "2.46为配对比值均值，含空闲预留；合并小时数所得2.453是另一种汇总，稳态训练区间仍跨零。",
+      "disposition": "current scoped wording retained",
+      "summary_en": "The 2.46 result is a mean of paired reserved-vCPU-hour ratios, including idle capacity. The steady-step interval remains inconclusive."
+    }
+  ]
+}
